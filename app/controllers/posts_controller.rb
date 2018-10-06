@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def new
-
+    @post = Post.new
   end
 
   def create
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
       redirect_to @post
     else
       render 'new'
-    end  
+    end
   end
 
   private def post_params
